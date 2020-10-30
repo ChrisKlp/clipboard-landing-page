@@ -1,0 +1,88 @@
+.footer {
+    background-color: rgba($color-grayish-blue, 0.1);
+
+    &__container {
+        @extend %container;
+
+        padding-top: 5.2rem;
+        padding-bottom: 3.7rem;
+
+        @include s-md {
+            padding-bottom: 5.2rem;
+            display: grid;
+            grid: 1fr / repeat(3, auto);
+            gap: 4rem;
+        }
+
+        @include s-lg {
+            padding: 5rem 0 3.5rem;
+            grid: 1fr / 16rem auto 13.2rem;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        width: 5.5rem;
+        height: 5.5rem;
+
+        @include s-md {
+            margin: 0;
+        }
+    }
+}
+
+.nav {
+    margin-bottom: 4rem;
+
+    @include s-md {
+        margin: 0;
+    }
+
+    &__list {
+        display: grid;
+        gap: 2.2rem;
+        justify-items: center;
+
+        @include s-md {
+            grid: repeat(2, 1fr) / repeat(3, minmax(10rem, 19rem));
+            justify-items: start;
+            gap: 1.5rem 0;
+        }
+    }
+
+    &__link {
+        @extend %text;
+
+        font-size: 1.8rem;
+        color: $color-dark-grayish-blue;
+        transition: color .3s;
+
+        &:hover {
+            color: $color-strong-cyan;
+        }
+    }
+}
+
+.social {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    @include s-md {
+        align-self: center;
+        justify-self: end;
+        gap: 3rem;
+    }
+
+    &__link {
+        fill: $color-dark-grayish-blue;
+        transition: fill .3s;
+
+        &:hover {
+            fill: $color-strong-cyan;
+        }
+    }
+}

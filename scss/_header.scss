@@ -1,0 +1,47 @@
+.header {
+    background: url('../images/bg-header-mobile.png') no-repeat top center / 100%;
+
+    @include s-md {
+        background: url('../images/bg-header-desktop.png') no-repeat top center / 100%;
+    }
+    &__container {
+        @extend %container;
+
+        padding-top: 12rem;
+        padding-bottom: 7rem;
+        text-align: center;
+
+        @include s-lg {
+            padding-top: 13rem;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 6.7rem;
+        width: 12.5rem;
+        height: 12.5rem;
+
+        @include s-lg {
+            margin-bottom: 5.7rem;
+        }
+    }
+
+    &__heading {
+        @extend %h1;
+    }
+
+    &__text {
+        @extend %text;
+
+        margin-bottom: 5rem;
+        padding: 0 0.3rem;
+
+        @include s-lg {
+            font-size: 2rem;
+            margin: 0 auto 4.5rem;
+            max-width: 70rem;
+        }
+    }
+}
