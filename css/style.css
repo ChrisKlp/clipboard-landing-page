@@ -265,10 +265,6 @@ input {
           animation-fill-mode: both;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .fade-left-in {
   -webkit-animation-name: slide-left-in, fade-in;
           animation-name: slide-left-in, fade-in;
@@ -468,12 +464,6 @@ input {
     font-size: 1.6rem;
     line-height: 190%;
   }
-}
-
-.sry0nly {
-  visibility: hidden;
-  height: 0;
-  width: 0;
 }
 
 .header {
